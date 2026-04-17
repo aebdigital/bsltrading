@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "NEXT_DIST_DIR=.next-dev next dev --hostname 127.0.0.1",
-    "build": "NEXT_DIST_DIR=.next-prod next build",
-    "start": "NEXT_DIST_DIR=.next-prod next start --hostname 127.0.0.1"
+    "dev": "next dev --hostname 127.0.0.1",
+    "build": "next build",
+    "start": "next start --hostname 127.0.0.1"
   },
   "dependencies": {
     "framer-motion": "^12.38.0",
