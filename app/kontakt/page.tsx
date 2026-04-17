@@ -98,28 +98,17 @@ export default function ContactPage() {
 
           <ContactForm />
 
-          <div className="rounded-[2rem] border border-black/5 bg-zinc-100 p-6 shadow-[0_12px_35px_rgba(0,0,0,0.05)] md:col-span-2">
-            <p className="text-[11px] font-black uppercase tracking-[0.3em] text-primary italic">
-              Sídlo firmy
-            </p>
-            <div className="mt-5 grid gap-4 text-base text-navy/70 md:grid-cols-2">
-              <p>
-                Suchý Jarok 1299/1
-                <br />
-                066 01 Humenné
-              </p>
-              <div className="flex flex-col gap-3">
-                <p>Priame otvorenie navigácie k sídlu firmy.</p>
-                <a
-                  href={company.mapHref}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex rounded-full border border-black/10 bg-white px-5 py-3 text-[11px] font-black uppercase tracking-[0.24em] text-navy italic transition-colors hover:border-primary hover:text-primary"
-                >
-                  Otvoriť mapu
-                </a>
-              </div>
-            </div>
+          <div className="overflow-hidden rounded-[2.2rem] border border-black/5 bg-zinc-100 shadow-[0_16px_40px_rgba(0,0,0,0.05)] md:col-span-2">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2621.5642999403816!2d21.902636977284614!3d48.92364029107931!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473eb50387092305%3A0x804c642fef369c61!2sBSL%20TRADING%20s.r.o.!5e0!3m2!1ssk!2ssk!4v1713289000000!5m2!1ssk!2ssk"
+              width="100%"
+              height="450"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="BSL TRADING mapa"
+            ></iframe>
           </div>
         </div>
       </section>

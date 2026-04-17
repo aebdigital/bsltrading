@@ -39,7 +39,7 @@ export function PageHero({
             {eyebrow}
           </p>
           <h1 className="text-3xl font-black uppercase leading-[0.92] tracking-tight text-white md:text-5xl">
-            {title}
+            {title.replace(/\.$/, "")}
           </h1>
           <p className="mt-6 max-w-3xl text-base leading-relaxed text-white/80 md:text-lg">
             {description}

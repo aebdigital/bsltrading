@@ -111,7 +111,7 @@ export const navItems: NavItem[] = [
 export const company = {
   name: "BSL TRADING s.r.o.",
   tagline: "Stavebná spoločnosť",
-  heroTitle: "Vaša stavba, náš cieľ.",
+  heroTitle: "Vaša stavba, náš cieľ",
   heroText:
     "Komplexné stavebné riešenia od rekonštrukcií po novostavby na kľúč, doplnené o referencie, certifikáty a projektové portfólio firmy BSL TRADING.",
   address: ["Suchý Jarok 1299/1", "066 01 Humenné"],
@@ -517,7 +517,7 @@ export const referenceProjects: ReferenceProject[] = [
       "rekonštrukcia interiéru: kancelárie, fitness centrum, reštaurácia a komerčné priestory",
     ],
     tags: ["rekonštrukcia", "komerčný objekt", "Humenné"],
-    coverImage: referenceImage("bez-facingu-interaktiv-page-006-1-scaled.jpg"),
+    coverImage: referenceImage("bez-facingu-interaktiv-page-007.jpg"),
     gallery: [
       {
         src: referenceImage("bez-facingu-interaktiv-page-007.jpg"),
@@ -547,7 +547,7 @@ export const referenceProjects: ReferenceProject[] = [
       "rekonštrukcia interiéru: omietky a sadrokartóny",
     ],
     tags: ["mestské byty", "rekonštrukcia", "Humenné"],
-    coverImage: referenceImage("bez-facingu-interaktiv-page-004.jpg"),
+    coverImage: referenceImage("bez-facingu-interaktiv-page-005.jpg"),
     gallery: [
       {
         src: referenceImage("bez-facingu-interaktiv-page-005.jpg"),
@@ -575,7 +575,7 @@ export const referenceProjects: ReferenceProject[] = [
       "výmena pivničných okien",
     ],
     tags: ["bytový dom", "zateplenie", "Humenné"],
-    coverImage: referenceImage("bez-facingu-interaktiv-page-014-scaled.jpg"),
+    coverImage: referenceImage("bez-facingu-interaktiv-page-015.jpg"),
     gallery: [
       {
         src: referenceImage("bez-facingu-interaktiv-page-015.jpg"),
@@ -603,7 +603,7 @@ export const referenceProjects: ReferenceProject[] = [
       "výstavba priľahlých spevnených plôch",
     ],
     tags: ["bytový dom", "rekonštrukcia", "Kamenica nad Cirochou"],
-    coverImage: referenceImage("bez-facingu-interaktiv-page-016-scaled.jpg"),
+    coverImage: referenceImage("bez-facingu-interaktiv-page-017-scaled.jpg"),
     gallery: [
       {
         src: referenceImage("bez-facingu-interaktiv-page-017-scaled.jpg"),
@@ -631,7 +631,7 @@ export const referenceProjects: ReferenceProject[] = [
       "výmena pivničných okien",
     ],
     tags: ["bytový dom", "zateplenie", "Humenné"],
-    coverImage: referenceImage("bez-facingu-interaktiv-page-018-scaled.jpg"),
+    coverImage: referenceImage("bez-facingu-interaktiv-page-019-scaled.jpg"),
     gallery: [
       {
         src: referenceImage("bez-facingu-interaktiv-page-019-scaled.jpg"),
@@ -656,7 +656,7 @@ export const referenceProjects: ReferenceProject[] = [
       "balkónové podlahy a nové zábradlie",
     ],
     tags: ["bytový dom", "zateplenie", "Humenné"],
-    coverImage: referenceImage("bez-facingu-interaktiv-page-022-scaled.jpg"),
+    coverImage: referenceImage("bez-facingu-interaktiv-page-023-scaled.jpg"),
     gallery: [
       {
         src: referenceImage("bez-facingu-interaktiv-page-023-scaled.jpg"),
@@ -683,7 +683,7 @@ export const referenceProjects: ReferenceProject[] = [
       "rekonštrukcia spoločných priestorov",
     ],
     tags: ["bytový dom", "zateplenie", "Humenné"],
-    coverImage: referenceImage("bez-facingu-interaktiv-page-020-scaled.jpg"),
+    coverImage: referenceImage("bez-facingu-interaktiv-page-021-1-scaled.jpg"),
     gallery: [
       {
         src: referenceImage("bez-facingu-interaktiv-page-021-1-scaled.jpg"),

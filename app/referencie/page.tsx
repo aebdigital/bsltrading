@@ -34,7 +34,7 @@ export default function ReferencesPage() {
             Detailné projekty
           </p>
           <h2 className="text-4xl font-black uppercase tracking-tight text-navy md:text-6xl">
-            Vybrané projekty s rozsahom prác, lokalitou a obdobím realizácie.
+            Vybrané projekty
           </h2>
         </div>
         <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">

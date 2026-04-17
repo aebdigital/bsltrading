@@ -20,7 +20,7 @@ export default function BytyStrazskePage() {
     <main>
       <PageHero
         eyebrow="Byty Strážske"
-        title="Predaj bytov s videami, pôdorysmi a fotogalériou."
+        title="Moderné bývanie v rezidencii Byty Strážske"
         description={apartmentProject.summary}
         image="/legacy/uploads/2023/08/Exterier_10.png"
         imageAlt="Byty Strážske"
