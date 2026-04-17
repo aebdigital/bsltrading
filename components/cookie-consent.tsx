@@ -180,9 +180,9 @@ export function CookieConsentProvider({ children }: { children: ReactNode }) {
 
       {isMounted && isBannerVisible ? (
         <div className="fixed inset-x-0 bottom-0 z-[70] p-4 sm:p-6">
-          <div className="mx-auto w-full max-w-5xl rounded-[2rem] border border-black/10 bg-white p-6 shadow-[0_20px_60px_rgba(0,0,0,0.18)] sm:p-7">
+          <div className="mx-auto w-[min(96vw,1380px)] rounded-[2rem] border border-black/10 bg-white p-6 shadow-[0_20px_60px_rgba(0,0,0,0.18)] sm:p-7">
             <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
-              <div className="max-w-3xl">
+              <div className="max-w-4xl">
                 <p className="text-[11px] font-black uppercase tracking-[0.3em] text-primary">
                   Cookies
                 </p>
