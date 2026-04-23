@@ -83,7 +83,7 @@ body {
   .fade-in-up-enter {
     opacity: 0;
     transform: translate3d(0, 24px, 0);
-    animation: fade-in-up 720ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    animation: fade-in-up 500ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
     animation-delay: var(--fade-delay, 0ms);
     will-change: opacity, transform;
   }

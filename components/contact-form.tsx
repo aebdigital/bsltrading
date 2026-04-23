@@ -2,6 +2,7 @@
 
 import type { ChangeEvent, FormEvent } from "react";
 import { useState } from "react";
+import { AnimatedButtonText } from "@/components/animated-button-text";
 
 type ContactFormData = {
   name: string;
@@ -71,17 +72,16 @@ export function ContactForm() {
   }
 
   return (
-    <article className="rounded-[2rem] border border-black/5 bg-white p-6 shadow-[0_12px_35px_rgba(0,0,0,0.05)] md:col-span-2 md:p-8">
+    <article className="border border-black/5 bg-white p-6 shadow-[0_12px_35px_rgba(0,0,0,0.05)] md:col-span-2 md:p-8">
       <div className="max-w-2xl">
-        <p className="text-[11px] font-black uppercase tracking-[0.3em] text-primary italic">
+        <p className="text-[11px] font-black uppercase tracking-normal text-primary">
           Napíšte nám
         </p>
         <h3 className="mt-3 text-3xl font-black uppercase tracking-tight text-navy">
           Kontaktný formulár
         </h3>
         <p className="mt-4 text-base leading-relaxed text-navy/70">
-          Správa príde priamo na firemný e-mail cez SMTP2GO. Môžete pridať aj telefónne číslo, aby sa vám tím vedel
-          ozvať späť rýchlejšie.
+          Váš dotaz doručíme priamo na náš firemný e-mail. Pre rýchlejšiu odozvu odporúčame uviesť aj vaše telefónne číslo.
         </p>
       </div>
 
@@ -99,7 +99,7 @@ export function ContactForm() {
 
         <div className="grid gap-5 md:grid-cols-2">
           <label className="block">
-            <span className="mb-2 block text-[11px] font-black uppercase tracking-[0.24em] text-navy/60 italic">
+            <span className="mb-2 block text-[11px] font-black uppercase tracking-normal text-navy/60">
               Meno a priezvisko
             </span>
             <input
@@ -110,12 +110,12 @@ export function ContactForm() {
               autoComplete="name"
               required
               maxLength={120}
-              className="w-full rounded-[1.25rem] border border-black/10 bg-zinc-50 px-5 py-4 text-base text-navy outline-none transition-colors focus:border-primary focus:bg-white"
+              className="w-full border border-black/10 bg-zinc-50 px-5 py-4 text-base text-navy outline-none transition-colors focus:border-primary focus:bg-white"
             />
           </label>
 
           <label className="block">
-            <span className="mb-2 block text-[11px] font-black uppercase tracking-[0.24em] text-navy/60 italic">
+            <span className="mb-2 block text-[11px] font-black uppercase tracking-normal text-navy/60">
               E-mail
             </span>
             <input
@@ -126,12 +126,12 @@ export function ContactForm() {
               autoComplete="email"
               required
               maxLength={160}
-              className="w-full rounded-[1.25rem] border border-black/10 bg-zinc-50 px-5 py-4 text-base text-navy outline-none transition-colors focus:border-primary focus:bg-white"
+              className="w-full border border-black/10 bg-zinc-50 px-5 py-4 text-base text-navy outline-none transition-colors focus:border-primary focus:bg-white"
             />
           </label>
 
           <label className="block md:col-span-2">
-            <span className="mb-2 block text-[11px] font-black uppercase tracking-[0.24em] text-navy/60 italic">
+            <span className="mb-2 block text-[11px] font-black uppercase tracking-normal text-navy/60">
               Telefón
             </span>
             <input
@@ -141,12 +141,12 @@ export function ContactForm() {
               onChange={handleChange}
               autoComplete="tel"
               maxLength={60}
-              className="w-full rounded-[1.25rem] border border-black/10 bg-zinc-50 px-5 py-4 text-base text-navy outline-none transition-colors focus:border-primary focus:bg-white"
+              className="w-full border border-black/10 bg-zinc-50 px-5 py-4 text-base text-navy outline-none transition-colors focus:border-primary focus:bg-white"
             />
           </label>
 
           <label className="block md:col-span-2">
-            <span className="mb-2 block text-[11px] font-black uppercase tracking-[0.24em] text-navy/60 italic">
+            <span className="mb-2 block text-[11px] font-black uppercase tracking-normal text-navy/60">
               Správa
             </span>
             <textarea
@@ -157,7 +157,7 @@ export function ContactForm() {
               minLength={10}
               maxLength={5000}
               rows={7}
-              className="min-h-[12rem] w-full rounded-[1.25rem] border border-black/10 bg-zinc-50 px-5 py-4 text-base text-navy outline-none transition-colors focus:border-primary focus:bg-white"
+              className="min-h-[12rem] w-full border border-black/10 bg-zinc-50 px-5 py-4 text-base text-navy outline-none transition-colors focus:border-primary focus:bg-white"
             />
           </label>
         </div>
@@ -166,9 +166,11 @@ export function ContactForm() {
           <button
             type="submit"
             disabled={isSubmitting}
-            className="inline-flex rounded-full bg-navy px-8 py-4 text-[11px] font-black uppercase tracking-[0.24em] text-white italic transition-colors hover:bg-primary disabled:cursor-not-allowed disabled:bg-navy/40"
+            className="group relative inline-flex items-center justify-center overflow-hidden bg-navy px-8 py-4 text-[11px] font-black uppercase tracking-normal text-white transition-colors hover:bg-primary disabled:cursor-not-allowed disabled:bg-navy/40"
           >
-            {isSubmitting ? "Odosielam..." : "Odoslať správu"}
+            <AnimatedButtonText>
+              {isSubmitting ? "Odosielam..." : "Odoslať správu"}
+            </AnimatedButtonText>
           </button>
           <p className="text-sm text-navy/55">Po odoslaní sa vám ozveme cez e-mail alebo telefón.</p>
         </div>
@@ -176,7 +178,7 @@ export function ContactForm() {
         {feedback ? (
           <div
             aria-live="polite"
-            className={`rounded-[1.35rem] border px-5 py-4 text-sm leading-relaxed ${
+            className={`border px-5 py-4 text-sm leading-relaxed ${
               status === "success"
                 ? "border-primary/25 bg-primary/10 text-navy"
                 : "border-red-200 bg-red-50 text-red-700"

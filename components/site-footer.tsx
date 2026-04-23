@@ -13,7 +13,7 @@ export function SiteFooter() {
             <p className="text-2xl font-black uppercase tracking-tighter text-white md:text-3xl">
               BSL TRADING
             </p>
-            <p className="text-[11px] font-black uppercase tracking-[0.3em] text-primary">
+            <p className="text-[11px] font-black uppercase tracking-normal text-primary">
               Stavebná spoločnosť
             </p>
           </div>
@@ -28,11 +28,24 @@ export function SiteFooter() {
               <p>IČO: {company.businessInfo.ico}</p>
               <p>DIČ: {company.businessInfo.dic}</p>
             </div>
+            <div className="pt-4">
+              <a
+                href={company.facebook}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex h-10 w-10 items-center justify-center bg-[#1877F2] text-white transition-opacity hover:opacity-85"
+                aria-label="Facebook"
+              >
+                <svg className="h-5 w-5 fill-current" viewBox="0 0 24 24">
+                  <path d="M9.101 24v-11.063h-3.842v-4.414h3.842v-3.256c0-3.814 2.329-5.89 5.73-5.89 1.629 0 3.03.121 3.437.176v3.986h-2.359c-1.85 0-2.208.88-2.208 2.169v2.835h4.414l-.574 4.414h-3.84v11.063z" />
+                </svg>
+              </a>
+            </div>
           </div>
         </div>
 
         <div className="space-y-5">
-          <p className="text-[11px] font-black uppercase tracking-[0.32em] text-white/45 italic">
+          <p className="text-[11px] font-black uppercase tracking-normal text-white/45">
             Navigácia
           </p>
           <div className="flex flex-col gap-3">
@@ -49,16 +62,16 @@ export function SiteFooter() {
         </div>
 
         <div className="space-y-5">
-          <p className="text-[11px] font-black uppercase tracking-[0.32em] text-white/45 italic">
+          <p className="text-[11px] font-black uppercase tracking-normal text-white/45">
             Kontakty
           </p>
           <div className="space-y-6">
             {contacts.map((contact) => (
               <div key={contact.email} className="space-y-1">
-                <p className="text-sm font-black uppercase tracking-[0.22em] text-primary italic">
+                <p className="text-sm font-black uppercase tracking-normal text-primary">
                   {contact.role}
                 </p>
-                <p className="text-xl font-black uppercase tracking-tight italic">{contact.name}</p>
+                <p className="text-xl font-black uppercase tracking-tight">{contact.name}</p>
                 <a
                   href={contact.phoneHref}
                   className="block text-white/75 transition-colors hover:text-primary"
@@ -67,7 +80,7 @@ export function SiteFooter() {
                 </a>
                 <a
                   href={`mailto:${contact.email}`}
-                  className="block text-sm uppercase tracking-[0.22em] text-white/60 transition-colors hover:text-primary"
+                  className="block text-sm uppercase tracking-normal text-white/60 transition-colors hover:text-primary"
                 >
                   {contact.email}
                 </a>
@@ -78,18 +91,10 @@ export function SiteFooter() {
       </div>
 
       <div className="relative mx-auto mt-16 flex w-[95vw] flex-col gap-5 border-t border-white/10 pt-6 md:flex-row md:items-center md:justify-between">
-        <p className="text-[11px] font-bold uppercase tracking-[0.28em] text-white/40">
+        <p className="text-[11px] font-bold uppercase tracking-normal text-white/40">
           © 2026 BSL TRADING | All rights reserved
         </p>
         <div className="flex flex-wrap items-center gap-x-6 gap-y-3 text-sm text-white/65">
-          <a
-            href={company.facebook}
-            target="_blank"
-            rel="noreferrer"
-            className="transition-colors hover:text-primary"
-          >
-            Facebook
-          </a>
           <CookieSettingsButton className="transition-colors hover:text-primary">
             Cookies
           </CookieSettingsButton>

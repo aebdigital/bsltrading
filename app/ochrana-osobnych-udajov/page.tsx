@@ -36,8 +36,8 @@ export default function PrivacyPolicyPage() {
       />
 
       <section className="mx-auto grid w-[95vw] gap-6 py-16 md:py-24 lg:grid-cols-[0.9fr_1.1fr]">
-        <div className="rounded-[2rem] border border-black/5 bg-white p-7 shadow-[0_12px_35px_rgba(0,0,0,0.05)] md:p-10">
-          <p className="text-[11px] font-black uppercase tracking-[0.3em] text-primary italic">
+        <div className="border border-black/5 bg-white p-7 shadow-[0_12px_35px_rgba(0,0,0,0.05)] md:p-10">
+          <p className="text-[11px] font-black uppercase tracking-[0.3em] text-primary">
             Prevádzkovateľ
           </p>
           <h2 className="mt-4 text-4xl font-black uppercase tracking-tight text-navy">
@@ -56,7 +56,7 @@ export default function PrivacyPolicyPage() {
           </div>
         </div>
 
-        <div className="rounded-[2rem] border border-black/5 bg-white p-7 shadow-[0_12px_35px_rgba(0,0,0,0.05)] md:p-10">
+        <div className="border border-black/5 bg-white p-7 shadow-[0_12px_35px_rgba(0,0,0,0.05)] md:p-10">
           <p className="text-base leading-relaxed text-navy/72">
             Tieto Zásady ochrany osobných údajov (ďalej len „Zásady“) popisujú, aké
             osobné údaje spracúvame v súvislosti s používaním našej webovej stránky,
@@ -67,8 +67,8 @@ export default function PrivacyPolicyPage() {
 
       <section className="mx-auto w-[95vw] pb-16 md:pb-24">
         <div className="grid gap-6">
-          <article className="rounded-[2rem] border border-black/5 bg-white p-7 shadow-[0_12px_35px_rgba(0,0,0,0.05)] md:p-10">
-            <p className="text-[11px] font-black uppercase tracking-[0.3em] text-primary italic">
+          <article className="border border-black/5 bg-white p-7 shadow-[0_12px_35px_rgba(0,0,0,0.05)] md:p-10">
+            <p className="text-[11px] font-black uppercase tracking-[0.3em] text-primary">
               I. Kontaktný formulár
             </p>
             <div className="mt-6 space-y-5 text-base leading-relaxed text-navy/72">
@@ -107,8 +107,8 @@ export default function PrivacyPolicyPage() {
             </div>
           </article>
 
-          <article className="rounded-[2rem] border border-black/5 bg-white p-7 shadow-[0_12px_35px_rgba(0,0,0,0.05)] md:p-10">
-            <p className="text-[11px] font-black uppercase tracking-[0.3em] text-primary italic">
+          <article className="border border-black/5 bg-white p-7 shadow-[0_12px_35px_rgba(0,0,0,0.05)] md:p-10">
+            <p className="text-[11px] font-black uppercase tracking-[0.3em] text-primary">
               II. Súbory cookies
             </p>
             <div className="mt-6 space-y-5 text-base leading-relaxed text-navy/72">
@@ -138,8 +138,8 @@ export default function PrivacyPolicyPage() {
             </div>
           </article>
 
-          <article className="rounded-[2rem] border border-black/5 bg-white p-7 shadow-[0_12px_35px_rgba(0,0,0,0.05)] md:p-10">
-            <p className="text-[11px] font-black uppercase tracking-[0.3em] text-primary italic">
+          <article className="border border-black/5 bg-white p-7 shadow-[0_12px_35px_rgba(0,0,0,0.05)] md:p-10">
+            <p className="text-[11px] font-black uppercase tracking-[0.3em] text-primary">
               III. Práva dotknutej osoby
             </p>
             <div className="mt-6 space-y-5 text-base leading-relaxed text-navy/72">

@@ -4,6 +4,8 @@ import "./globals.css";
 
 import { CookieConsentProvider } from "@/components/cookie-consent";
 import { FadeInUpScope } from "@/components/fade-in-up-scope";
+import { LightboxProvider } from "@/components/lightbox-context";
+import { Lightbox } from "@/components/lightbox";
 import { StructuredData } from "@/components/structured-data";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
@@ -29,14 +31,17 @@ export default function RootLayout({
   return (
     <html lang="sk">
       <body className={`${inter.variable} ${figtree.variable} bg-[#f5f5f2] font-sans text-navy antialiased`}>
-        <CookieConsentProvider>
-          <StructuredData data={[createOrganizationJsonLd(), createWebsiteJsonLd()]} id="site-structured-data" />
-          <div className="min-h-screen">
-            <SiteHeader />
-            <FadeInUpScope>{children}</FadeInUpScope>
-            <SiteFooter />
-          </div>
-        </CookieConsentProvider>
+        <LightboxProvider>
+          <CookieConsentProvider>
+            <StructuredData data={[createOrganizationJsonLd(), createWebsiteJsonLd()]} id="site-structured-data" />
+            <div className="min-h-screen">
+              <SiteHeader />
+              <FadeInUpScope>{children}</FadeInUpScope>
+              <SiteFooter />
+            </div>
+            <Lightbox />
+          </CookieConsentProvider>
+        </LightboxProvider>
       </body>
     </html>
   );

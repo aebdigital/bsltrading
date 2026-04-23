@@ -46,7 +46,7 @@ export function SiteHeader() {
             <span className="text-2xl font-black uppercase tracking-tighter text-navy md:text-3xl">
               BSL TRADING
             </span>
-            <span className="mt-1 text-[11px] font-black uppercase tracking-[0.3em] text-primary">
+            <span className="mt-1 text-[11px] font-black uppercase tracking-normal text-primary">
               Stavebná spoločnosť
             </span>
           </span>
@@ -57,11 +57,16 @@ export function SiteHeader() {
             <Link
               key={item.href}
               href={item.href}
-              className={`text-[11px] font-black uppercase tracking-[0.28em] transition-colors ${
+              className={`group relative text-[11px] font-black uppercase tracking-normal transition-colors ${
                 isActive(pathname, item.href) ? "text-primary" : "text-navy hover:text-primary"
               }`}
             >
               {item.label}
+              <span
+                className={`absolute -bottom-1 left-0 h-0.5 bg-primary transition-all duration-300 ${
+                  isActive(pathname, item.href) ? "w-full" : "w-0 group-hover:w-full"
+                }`}
+              />
             </Link>
           ))}
         </nav>
@@ -69,7 +74,7 @@ export function SiteHeader() {
         <div className="hidden items-center lg:flex">
           <Link
             href="/kontakt"
-            className="rounded-full bg-navy px-6 py-3 text-[11px] font-black uppercase tracking-[0.22em] text-white transition-colors hover:bg-primary"
+            className="bg-navy px-6 py-3 text-[11px] font-black uppercase tracking-normal text-white transition-colors hover:bg-primary"
           >
             Kontakt
           </Link>
@@ -97,11 +102,14 @@ export function SiteHeader() {
             <Link
               key={item.href}
               href={item.href}
-              className={`text-sm font-black uppercase tracking-[0.26em] ${
+              className={`relative w-fit text-sm font-black uppercase tracking-normal ${
                 isActive(pathname, item.href) ? "text-primary" : "text-navy"
               }`}
             >
               {item.label}
+              {isActive(pathname, item.href) && (
+                <span className="absolute -bottom-1 left-0 h-0.5 w-full bg-primary" />
+              )}
             </Link>
           ))}
         </nav>

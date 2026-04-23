@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
-import { MediaCard } from "@/components/media-card";
+import { GalleryGrid } from "@/components/gallery-grid";
 import { PageHero } from "@/components/page-hero";
 import { ServiceSidebar } from "@/components/service-sidebar";
 import { StructuredData } from "@/components/structured-data";
@@ -70,7 +70,6 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
           {service.sections.map((section) => (
             <article
               key={section.title}
-              className="rounded-[2.2rem] border border-black/5 bg-white p-7 shadow-[0_12px_35px_rgba(0,0,0,0.05)] md:p-10"
             >
               <h2 className="text-3xl font-black uppercase tracking-tight text-navy md:text-4xl">
                 {section.title}
@@ -85,7 +84,7 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
                   {section.bullets.map((bullet) => (
                     <li
                       key={bullet}
-                      className="rounded-[1.4rem] border border-black/5 bg-zinc-50 px-5 py-4 text-base text-navy/72"
+                      className="border border-black/5 bg-zinc-50 px-5 py-4 text-base text-navy/72"
                     >
                       {bullet}
                     </li>
@@ -94,14 +93,14 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
               ) : null}
 
               {section.table ? (
-                <div className="mt-6 overflow-hidden rounded-[1.8rem] border border-black/5">
+                <div className="mt-6 overflow-hidden border border-black/5">
                   <table className="w-full border-collapse bg-zinc-50 text-left">
                     <thead>
                       <tr className="bg-navy text-white">
                         {section.table.columns.map((column) => (
                           <th
                             key={column}
-                            className="px-5 py-4 text-[11px] font-black uppercase tracking-[0.24em] italic"
+                            className="px-5 py-4 text-[11px] font-black uppercase tracking-normal"
                           >
                             {column}
                           </th>
@@ -124,17 +123,7 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
               ) : null}
 
               {section.gallery?.length ? (
-                <div className="mt-8 grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
-                  {section.gallery.map((image, index) => (
-                    <MediaCard
-                      key={image.src}
-                      src={image.src}
-                      alt={image.alt}
-                      priority={index < 3}
-                      className="h-72 md:h-80"
-                    />
-                  ))}
-                </div>
+                <GalleryGrid images={section.gallery} className="mt-8" />
               ) : null}
             </article>
           ))}

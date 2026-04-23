@@ -6,6 +6,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 
 import { MediaCard } from "@/components/media-card";
+import { AnimatedButtonText } from "@/components/animated-button-text";
 import { company, featuredReferences, featuredServices } from "@/lib/site-content";
 
 export default function HomePageClient() {
@@ -39,10 +40,13 @@ export default function HomePageClient() {
         
         <motion.div 
           style={{ opacity }}
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
           className="relative mx-auto flex h-full w-[95vw] items-center py-20 md:py-24"
         >
           <div className="max-w-4xl">
-            <p className="mb-6 text-[11px] font-black uppercase tracking-[0.34em] text-primary italic">
+            <p className="mb-6 text-[11px] font-black uppercase tracking-normal text-primary">
               Stavebná spoločnosť
             </p>
             <h1 className="text-5xl font-black uppercase leading-[0.85] tracking-tight text-white md:text-[7rem]">
@@ -54,15 +58,15 @@ export default function HomePageClient() {
             <div className="mt-12 flex flex-col gap-4 sm:flex-row">
               <Link
                 href="/nase-sluzby"
-                className="inline-flex rounded-full bg-primary px-9 py-4 text-[11px] font-black uppercase tracking-[0.24em] text-white italic transition-colors hover:bg-white hover:text-navy"
+                className="group relative inline-flex items-center justify-center overflow-hidden bg-primary px-9 py-4 text-[11px] font-black uppercase tracking-normal text-white transition-colors hover:bg-white hover:text-navy"
               >
-                Naše služby
+                <AnimatedButtonText>Naše služby</AnimatedButtonText>
               </Link>
               <Link
                 href="/referencie"
-                className="inline-flex rounded-full border border-white/20 bg-white/10 px-9 py-4 text-[11px] font-black uppercase tracking-[0.24em] text-white italic backdrop-blur-sm transition-colors hover:border-primary hover:bg-primary"
+                className="group relative inline-flex items-center justify-center overflow-hidden border border-white/20 bg-white/10 px-9 py-4 text-[11px] font-black uppercase tracking-normal text-white backdrop-blur-sm transition-colors hover:border-primary hover:bg-primary"
               >
-                Referencie
+                <AnimatedButtonText>Referencie</AnimatedButtonText>
               </Link>
             </div>
           </div>
@@ -72,21 +76,37 @@ export default function HomePageClient() {
       {/* Content Wrapper that slides over the hero */}
       <div className="relative z-10 bg-[#f5f5f2] shadow-[0_-20px_50px_rgba(0,0,0,0.2)]">
         <section className="mx-auto w-[95vw] py-20 md:py-28">
-          <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr]">
-            <div>
-              <p className="mb-5 text-[11px] font-black uppercase tracking-[0.34em] text-primary italic">
-                O firme
-              </p>
-              <h2 className="text-4xl font-black uppercase leading-[0.9] tracking-tight text-navy md:text-6xl">
-                Príbeh poctivej práce od drobných stavieb po väčšie realizácie.
-              </h2>
+          <div className="grid gap-16 lg:grid-cols-[1.1fr_0.9fr]">
+            <div className="space-y-10">
+              <div>
+                <p className="mb-5 text-[11px] font-black uppercase tracking-normal text-primary">
+                  O firme
+                </p>
+                <h2 className="text-4xl font-black uppercase leading-[0.9] tracking-tight text-navy md:text-6xl">
+                  Príbeh poctivej práce od drobných stavieb po väčšie realizácie.
+                </h2>
+              </div>
+              <div className="space-y-6 text-lg leading-relaxed text-navy/72">
+                {company.story.map((paragraph) => (
+                  <p key={paragraph}>{paragraph}</p>
+                ))}
+              </div>
             </div>
-            <div className="grid gap-6 md:grid-cols-2">
-              {company.story.slice(0, 4).map((paragraph) => (
-                <div key={paragraph} className="rounded-[2rem] border border-black/5 bg-white p-6 shadow-[0_12px_35px_rgba(0,0,0,0.04)]">
-                  <p className="text-base leading-relaxed text-navy/72">{paragraph}</p>
-                </div>
-              ))}
+            <div className="relative">
+              <div className="sticky top-28 h-[36rem] overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.12)]">
+                <Image
+                  src="/vinco_front.jpg"
+                  alt="Vinco - BSL Trading"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 40vw"
+                />
+              </div>
+              <div className="absolute -bottom-6 -left-6 h-32 w-32 bg-primary p-5 text-white shadow-xl">
+                <p className="text-[10px] font-black uppercase tracking-normal">Skúsenosti</p>
+                <p className="mt-1 text-3xl font-black">15+</p>
+                <p className="text-[10px] font-bold opacity-80 uppercase tracking-tight">rokov na trhu</p>
+              </div>
             </div>
           </div>
         </section>
@@ -95,7 +115,7 @@ export default function HomePageClient() {
           <div className="mx-auto w-[95vw]">
             <div className="mb-10">
               <div>
-                <p className="mb-4 text-[11px] font-black uppercase tracking-[0.34em] text-primary italic">
+                <p className="mb-4 text-[11px] font-black uppercase tracking-normal text-primary">
                   Služby
                 </p>
                 <h2 className="text-4xl font-black uppercase leading-[0.9] tracking-tight text-navy md:text-6xl">
@@ -109,7 +129,7 @@ export default function HomePageClient() {
                 <Link
                   key={service.slug}
                   href={service.href}
-                  className="group relative min-h-[24rem] overflow-hidden rounded-[2rem] bg-[#161616] transition-all hover:-translate-y-1 hover:shadow-[0_20px_45px_rgba(0,0,0,0.1)]"
+                  className="group relative min-h-[24rem] overflow-hidden bg-[#161616] transition-all hover:-translate-y-1 hover:shadow-[0_20px_45px_rgba(0,0,0,0.1)]"
                 >
                   <div className="absolute inset-0">
                     <MediaCard
@@ -136,7 +156,7 @@ export default function HomePageClient() {
         <section className="mx-auto w-[95vw] py-20 md:py-28">
           <div className="mb-10">
             <div>
-              <p className="mb-4 text-[11px] font-black uppercase tracking-[0.34em] text-primary italic">
+              <p className="mb-4 text-[11px] font-black uppercase tracking-normal text-primary">
                 Referencie
               </p>
               <h2 className="text-4xl font-black uppercase leading-[0.9] tracking-tight text-navy md:text-6xl">
@@ -150,17 +170,17 @@ export default function HomePageClient() {
               <Link
                 key={project.slug}
                 href={`/referencie/${project.slug}`}
-                className="group overflow-hidden rounded-[2rem] border border-black/5 bg-white transition-all hover:-translate-y-1 hover:shadow-[0_22px_48px_rgba(0,0,0,0.06)]"
+                className="group overflow-hidden border border-black/5 bg-white transition-all hover:-translate-y-1 hover:shadow-[0_22px_48px_rgba(0,0,0,0.06)]"
               >
                 <div className="relative h-72">
                   <MediaCard src={project.coverImage} alt={project.title} className="h-full rounded-none border-0 transition-transform duration-700 group-hover:scale-[1.03]" />
                 </div>
                 <div className="space-y-4 p-6">
                   <div className="flex items-center justify-between gap-4">
-                    <p className="text-[11px] font-black uppercase tracking-[0.28em] text-primary italic">
+                    <p className="text-[11px] font-black uppercase tracking-normal text-primary">
                       {project.yearLabel}
                     </p>
-                    <p className="text-[11px] font-black uppercase tracking-[0.28em] text-navy/45 italic">
+                    <p className="text-[11px] font-black uppercase tracking-normal text-navy/45">
                       {project.location}
                     </p>
                   </div>

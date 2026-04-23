@@ -33,10 +33,10 @@ export default function CertificatesPage() {
               href={certificate.pdfUrl}
               target="_blank"
               aria-label={`Otvoriť PDF: ${certificate.title}`}
-              className="group overflow-hidden rounded-[2rem] border border-black/5 bg-white shadow-[0_12px_35px_rgba(0,0,0,0.05)] transition-all hover:-translate-y-1 hover:shadow-[0_18px_42px_rgba(0,0,0,0.08)]"
+              className="group overflow-hidden border border-black/5 bg-white shadow-[0_12px_35px_rgba(0,0,0,0.05)] transition-all hover:-translate-y-1 hover:shadow-[0_18px_42px_rgba(0,0,0,0.08)]"
             >
               <div className="relative aspect-[210/297] bg-zinc-100">
-                <span className="absolute right-4 top-4 z-10 rounded-full bg-primary px-3 py-1 text-[10px] font-black uppercase tracking-[0.24em] text-white">
+                <span className="absolute right-4 top-4 z-10 bg-primary px-3 py-1 text-[10px] font-black uppercase tracking-normal text-white">
                   PDF
                 </span>
                 <Image

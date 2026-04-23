@@ -43,7 +43,7 @@ export function FadeInUpScope({ children }: { children: ReactNode }) {
       void scope.offsetHeight;
 
       nodes.forEach((node, index) => {
-        node.style.setProperty("--fade-delay", `${Math.min(index * 40, 520)}ms`);
+        node.style.setProperty("--fade-delay", `${Math.min(index * 25, 300)}ms`);
         node.classList.add("fade-in-up-enter");
       });
     });

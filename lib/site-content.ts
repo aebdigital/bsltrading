@@ -994,15 +994,15 @@ export const apartmentProject: ApartmentProject = {
   ],
   videos: [
     {
-      title: "Video prehliadka 1",
+      title: "Predaj byt H",
       src: apartmentVideo("VID-20230727-WA0001.mp4"),
     },
     {
-      title: "Video prehliadka 2",
+      title: "Predaj byt E",
       src: apartmentVideo("VID-20230727-WA0002.mp4"),
     },
     {
-      title: "Video prehliadka 3",
+      title: "Predaj byt I",
       src: apartmentVideo("VID-20230727-WA0003.mp4"),
     },
   ],
