@@ -34,22 +34,36 @@ export function FadeInUpScope({ children }: { children: ReactNode }) {
 
     const nodes = Array.from(scope.querySelectorAll<HTMLElement>(animationSelector));
 
+    // Initial reset
     nodes.forEach((node) => {
       node.classList.remove("fade-in-up-enter");
       node.style.removeProperty("--fade-delay");
+      node.style.opacity = "0"; // Ensure they start hidden
     });
 
-    const rafId = window.requestAnimationFrame(() => {
-      void scope.offsetHeight;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const target = entry.target as HTMLElement;
+            target.classList.add("fade-in-up-enter");
+            observer.unobserve(target);
+          }
+        });
+      },
+      {
+        threshold: 0.1,
+        rootMargin: "0px 0px -40px 0px",
+      }
+    );
 
-      nodes.forEach((node, index) => {
-        node.style.setProperty("--fade-delay", `${Math.min(index * 25, 300)}ms`);
-        node.classList.add("fade-in-up-enter");
-      });
+    nodes.forEach((node, index) => {
+      node.style.setProperty("--fade-delay", `${Math.min(index * 50, 400)}ms`);
+      observer.observe(node);
     });
 
     return () => {
-      window.cancelAnimationFrame(rafId);
+      observer.disconnect();
     };
   }, [pathname]);
 

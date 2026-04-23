@@ -39,9 +39,9 @@ export function PageHero({
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(58,183,155,0.22),transparent_28%),linear-gradient(to_top,rgba(0,0,0,0.68),rgba(0,0,0,0.2))]" />
       <div className="relative mx-auto flex h-full w-[95vw] items-end py-10 md:py-12">
         <motion.div
-          initial={{ opacity: 0, y: 24 }}
+          initial={{ opacity: 0, y: 32 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 0.85, ease: [0.22, 1, 0.36, 1] }}
           className="max-w-4xl"
         >
           <p className="mb-5 text-[11px] font-black uppercase tracking-normal text-primary">

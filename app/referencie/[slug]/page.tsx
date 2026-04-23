@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 
 import { ReferenceGallery } from "@/components/reference-gallery";
+import { MediaCard } from "@/components/media-card";
 import { PageHero } from "@/components/page-hero";
 import { StructuredData } from "@/components/structured-data";
 import { getReferenceProject, referenceProjects } from "@/lib/site-content";
