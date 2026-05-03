@@ -7,13 +7,12 @@ export const siteName = "BSL TRADING";
 export const defaultOgImage = "/images/hero.jpg";
 
 const defaultDescription =
-  "BSL TRADING s.r.o. prináša rekonštrukčné práce, rezanie asfaltu a betónu, výkopové práce, zatepľovanie budov, stavebné práce, buracie práce, referencie a kontakty firmy v prehľadnom novom webe.";
+  "BSL TRADING s.r.o. prináša rekonštrukčné práce, výkopové práce, zatepľovanie budov, stavebné práce, buracie práce, referencie a kontakty firmy v prehľadnom novom webe.";
 
 const defaultKeywords = [
   "BSL TRADING",
   "stavebná spoločnosť Humenné",
   "rekonštrukčné práce",
-  "rezanie asfaltu a betónu",
   "výkopové práce",
   "zatepľovanie budov",
   "stavebné práce",
@@ -125,7 +124,7 @@ export function createOrganizationJsonLd() {
       addressCountry: "SK",
     },
     sameAs: [company.facebook],
-    logo: absoluteUrl("/images/hero.jpg"),
+    logo: absoluteUrl("/logo.png"),
   };
 }
 

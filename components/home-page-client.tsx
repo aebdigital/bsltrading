@@ -36,7 +36,7 @@ export default function HomePageClient() {
         </motion.div>
         
         <div className="absolute inset-0 bg-black/55" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(58,183,155,0.24),transparent_30%),linear-gradient(to_top,rgba(0,0,0,0.76),rgba(0,0,0,0.2))]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(29,80,162,0.22),transparent_35%),radial-gradient(circle_at_bottom_right,rgba(239,29,36,0.1),transparent_30%),linear-gradient(to_top,rgba(0,0,0,0.76),rgba(0,0,0,0.2))]" />
         
         <motion.div 
           style={{ opacity }}
@@ -74,7 +74,7 @@ export default function HomePageClient() {
       </section>
 
       {/* Content Wrapper that slides over the hero */}
-      <div className="relative z-10 bg-[#f5f5f2] shadow-[0_-20px_50px_rgba(0,0,0,0.2)]">
+      <div className="relative z-10 bg-white shadow-[0_-20px_50px_rgba(0,0,0,0.2)]">
         <section className="mx-auto w-[95vw] py-20 md:py-28">
           <div className="grid gap-16 lg:grid-cols-[1.1fr_0.9fr]">
             <div className="space-y-10">
@@ -93,20 +93,7 @@ export default function HomePageClient() {
               </div>
             </div>
             <div className="relative">
-              <div className="sticky top-28 h-[36rem] overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.12)]">
-                <Image
-                  src="/vinco_front.jpg"
-                  alt="Vinco - BSL Trading"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 1024px) 100vw, 40vw"
-                />
-              </div>
-              <div className="absolute -bottom-6 -left-6 h-32 w-32 bg-primary p-5 text-white shadow-xl">
-                <p className="text-[10px] font-black uppercase tracking-normal">Skúsenosti</p>
-                <p className="mt-1 text-3xl font-black">15+</p>
-                <p className="text-[10px] font-bold opacity-80 uppercase tracking-tight">rokov na trhu</p>
-              </div>
+              <div className="sticky top-28 h-[36rem] bg-primary shadow-[0_20px_50px_rgba(0,0,0,0.12)]" />
             </div>
           </div>
         </section>
@@ -119,7 +106,7 @@ export default function HomePageClient() {
                   Služby
                 </p>
                 <h2 className="text-4xl font-black uppercase leading-[0.9] tracking-tight text-navy md:text-6xl">
-                  Šesť nosných oblastí pre stavbu, obnovu aj technické zásahy.
+                  Päť nosných oblastí pre stavbu, obnovu aj technické zásahy.
                 </h2>
               </div>
             </div>

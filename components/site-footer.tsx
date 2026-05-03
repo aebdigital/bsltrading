@@ -6,7 +6,7 @@ import { company, contacts, navItems } from "@/lib/site-content";
 export function SiteFooter() {
   return (
     <footer className="relative overflow-hidden bg-[#161616] pb-10 pt-20 text-white">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(58,183,155,0.2),transparent_35%),radial-gradient(circle_at_bottom_right,rgba(255,255,255,0.08),transparent_25%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(29,80,162,0.22),transparent_40%),radial-gradient(circle_at_bottom_right,rgba(239,29,36,0.1),transparent_35%)]" />
       <div className="relative mx-auto grid w-[95vw] gap-16 lg:grid-cols-[1.2fr_1fr_1fr]">
         <div className="space-y-8">
           <div className="space-y-2">
@@ -110,7 +110,7 @@ export function SiteFooter() {
             rel="noreferrer"
             className="transition-colors hover:text-primary"
           >
-            Tvorba web - AEB Digital
+            Tvorba webu - AEB Digital
           </a>
         </div>
       </div>

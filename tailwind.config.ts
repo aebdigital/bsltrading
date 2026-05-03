@@ -5,8 +5,9 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        primary: "#3ab79b",
-        navy: "#424242",
+        primary: "#1d50a2",
+        secondary: "#ef1d24",
+        navy: "#1a1a1a",
       },
       fontFamily: {
         sans: ["var(--font-inter)", "sans-serif"],

@@ -22,7 +22,7 @@ export type GalleryImage = {
 };
 
 export type ContentSection = {
-  title: string;
+  title?: string;
   body?: string;
   bullets?: string[];
   table?: TableData;
@@ -126,11 +126,11 @@ export const company = {
   facebook: "https://www.facebook.com/bsvstavhumenne/",
   foundedLabel: "2009",
   teamLabel: "33+",
-  serviceCountLabel: "6",
+  serviceCountLabel: "5",
   story: [
     "Osvedčeným receptom na úspech sú schopnosti, trpezlivosť a ťažká práca. V prvých rokoch súčasného storočia začínala firma pri drobných rekonštrukciách bytov a domov v regióne Humenné.",
     "Rastúci dopyt postupne posunul firmu od menších zákaziek k novostavbám rodinných domov, priemyselným objektom a komplexným obnovám bytových domov. V roku 2009 vznikla spoločnosť BSV STAV s.r.o., z ktorej sa neskôr stala dnešná BSL TRADING.",
-    "Portfólio sa rozšírilo o murárske práce, sádrokartónové konštrukcie, potery, keramické dlažby a obklady, zatepľovanie fasád, spevnené plochy, zemné práce aj rezanie asfaltu a betónu.",
+    "Portfólio sa rozšírilo o murárske práce, sádrokartónové konštrukcie, potery, keramické dlažby a obklady, zatepľovanie fasád, spevnené plochy a zemné práce.",
     "Dnes spoločnosť stojí na kombinácii dlhoročných skúseností, vlastných tímov a realizácií, ktoré zahŕňajú bytové domy, občianske stavby, komerčné priestory aj developerské projekty.",
   ],
 };
@@ -156,6 +156,13 @@ export const contacts: ContactPerson[] = [
     phone: "0908 323 627",
     phoneHref: "tel:+421908323627",
     email: "bslsavkanic@gmail.com",
+  },
+  {
+    name: "Ing. Maria Gaľová",
+    role: "Asistentka obchodu",
+    phone: "0907 723 897",
+    phoneHref: "tel:+421907723897",
+    email: "bslmgalova@gmail.com",
   },
 ];
 
@@ -194,9 +201,6 @@ export const services: Service[] = [
           "Od rodinného domu až po panelový dom. Súčasťou realizácií sú obvodové plášte budov, dlažby, obnovy stien, maľovanie aj ďalšie interiérové stavebné práce.",
       },
       {
-        title: "Fotogaléria rekonštrukčných prác",
-        body:
-          "Výber fotografií z rekonštrukčných realizácií je rozdelený podľa typu prác.",
         gallery: [
           {
             src: reconstructionImage("20140204-rek_balkonov_teras_1.jpg"),
@@ -295,50 +299,6 @@ export const services: Service[] = [
             alt: "Rekonštrukcia vstupov bytových domov 8",
           },
         ],
-      },
-    ],
-  },
-  {
-    slug: "rezanie-asfaltu-a-betonu",
-    href: "/nase-sluzby/rezanie-asfaltu-a-betonu",
-    title: "Rezanie asfaltu a betónu",
-    menuLabel: "Rezanie asfaltu a betónu",
-    category: "Príprava pred výkopmi",
-    summary:
-      "Horizontálne rezy asfaltu a betónu diamantovými kotúčmi s orientačným cenníkom za meter rezu.",
-    intro:
-      "Na objednávku firma realizuje rezanie betónu alebo asfaltu. Horizontálne rezy plôch vykonáva pomocou diamantových kotúčov s priemerom do 450 mm.",
-    heroImage: "/images/service2.jpg",
-    previewImage: "/services/rezanie asfaltu.jpg",
-    highlights: [
-      "čisté oddelenie výkopových priestorov",
-      "jednoduchšie odstránenie asfaltových a betónových plôch",
-      "možnosť realizácie nezávisle od začiatku výkopových prác",
-    ],
-    sections: [
-      {
-        title: "Výhody rezania asfaltu a betónu",
-        bullets: [
-          "čisté oddelenie výkopových priestorov",
-          "jednoduchšie odstránenie betónových alebo asfaltových plôch",
-          "zlepšenie vzhľadu vozovky alebo chodníka",
-        ],
-      },
-      {
-        title: "Prevádzkové nasadenie",
-        body:
-          "Rezanie sa dá vykonať kedykoľvek, nezávisle od termínu začiatku vlastných výkopových alebo opravárenských prác.",
-      },
-      {
-        title: "Orientačný cenník prác",
-        table: {
-          columns: ["Hĺbka rezu", "Asfalt", "Betón"],
-          rows: [
-            ["2 cm", "1 €", "2 €"],
-            ["2 až 5 cm", "1,6 €", "3 €"],
-            ["5 až 8 cm", "2 €", "3,8 €"],
-          ],
-        },
       },
     ],
   },

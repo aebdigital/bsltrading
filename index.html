@@ -14,14 +14,14 @@
         tailwind.config = {
             theme: {
                 extend: {
-                    colors: { primary: '#3ab79b', navy: '#424242' },
+                    colors: { primary: '#1d50a2', navy: '#1a1a1a' },
                     fontFamily: { sans: ['Inter', 'sans-serif'] }
                 }
             }
         }
     </script>
     <style>
-        :root { --color-primary: #3ab79b; --color-navy: #424242; }
+        :root { --color-primary: #1d50a2; --color-navy: #1a1a1a; }
         body { background-color: #ffffff; font-family: 'Inter', sans-serif; overflow-x: hidden; }
         
         #site-header { transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1); padding: 1.5rem 0; }
@@ -42,12 +42,12 @@
         .ref-card { flex: 0 0 480px; height: 650px; position: relative; border-radius: 1.5rem; overflow: hidden; cursor: pointer; transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
         @media (max-width: 768px) { .ref-card { flex: 0 0 85vw; height: 500px; } }
         .ref-card:hover { transform: translateY(-10px); }
-        .ref-card-overlay { position: absolute; bottom: 0; left: 0; right: 0; padding: 2.5rem 2rem; background: rgba(58, 183, 155, 0.8); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); color: white; transform: translateY(0); transition: transform 0.6s cubic-bezier(0.76, 0, 0.24, 1); z-index: 20; }
+        .ref-card-overlay { position: absolute; bottom: 0; left: 0; right: 0; padding: 2.5rem 2rem; background: rgba(29, 80, 162, 0.8); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); color: white; transform: translateY(0); transition: transform 0.6s cubic-bezier(0.76, 0, 0.24, 1); z-index: 20; }
         
         .hover-reveal-clip { position: absolute; inset: 0; z-index: 1; clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%); transition: clip-path 0.7s cubic-bezier(0.76, 0, 0.24, 1); }
         .ref-card:hover .hover-reveal-clip { clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
 
-        .tag { display: inline-flex; align-items: center; gap: 0.5rem; background: #f0fdfa; border: 1px solid #ccfbf1; padding: 0.5rem 1rem; border-radius: 9999px; font-size: 0.65rem; font-weight: 900; letter-spacing: 0.1em; text-transform: uppercase; font-style: italic; color: #0d9488; }
+        .tag { display: inline-flex; align-items: center; gap: 0.5rem; background: #f0f7ff; border: 1px solid #dbeafe; padding: 0.5rem 1rem; border-radius: 9999px; font-size: 0.65rem; font-weight: 900; letter-spacing: 0.1em; text-transform: uppercase; font-style: italic; color: #1d50a2; }
         
         .fade-up{opacity:0;transform:translateY(30px);animation:fade-up-anim .7s ease-out forwards}.fade-up-1{animation-delay:.1s}.fade-up-2{animation-delay:.2s}.fade-up-3{animation-delay:.3s}
         @keyframes fade-up-anim{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
@@ -97,10 +97,10 @@
                         Komplexné stavebné riešenia od rekonštrukcií po novostavby na kľúč s osvedčeným receptom na úspech.
                     </p>
                     <div class="mt-16 flex flex-col sm:flex-row gap-6 fade-up fade-up-3">
-                        <a href="#kontakt" class="px-12 py-5 bg-navy text-white text-xs font-black rounded-full hover:bg-primary transition-all duration-500 uppercase italic tracking-tighter">
+                        <a href="#kontakt" class="px-12 py-5 bg-primary text-white text-xs font-black rounded-full hover:bg-navy transition-all duration-500 uppercase italic tracking-tighter">
                             Kontaktujte nás
                         </a>
-                        <a href="#sluzby" class="px-12 py-5 border border-navy/10 text-navy text-xs font-bold rounded-full hover:bg-navy hover:text-white transition-all duration-500 uppercase italic tracking-tighter">
+                        <a href="#sluzby" class="px-12 py-5 border border-navy/10 text-navy text-xs font-bold rounded-full hover:bg-primary hover:text-white transition-all duration-500 uppercase italic tracking-tighter">
                             Naše služby
                         </a>
                     </div>
@@ -163,17 +163,7 @@
                                 <p class="text-sm text-white/80 mt-2 font-light italic">Od maľovania a dlažieb až po celkovú obnovu bytových domov.</p>
                             </div>
                         </div>
-                        <div class="ref-card group">
-                            <img src="service2.jpg" class="object-cover w-full h-full transition-transform duration-1000 group-hover:scale-110">
-                            <div class="hover-reveal-clip">
-                                <img src="service3.jpg" class="object-cover w-full h-full">
-                            </div>
-                            <div class="ref-card-overlay">
-                                <p class="text-[10px] font-bold tracking-[0.2em] uppercase text-white/60 mb-2 italic">Rezanie</p>
-                                <h3 class="text-3xl font-black italic tracking-tighter uppercase">Rezanie betónu</h3>
-                                <p class="text-sm text-white/80 mt-2 font-light italic">Príprava pred výkopovými prácami na vozovkách a chodníkoch.</p>
-                            </div>
-                        </div>
+
                         <div class="ref-card group">
                             <img src="service3.jpg" class="object-cover w-full h-full transition-transform duration-1000 group-hover:scale-110">
                             <div class="hover-reveal-clip">
@@ -275,6 +265,14 @@
                                     <div class="space-y-2">
                                         <a href="tel:+421908323627" class="text-xl font-light italic block hover:text-primary transition-colors tracking-tighter">0908 323 627</a>
                                         <a href="mailto:bslsavkanic@gmail.com" class="text-xs font-bold italic block hover:text-primary transition-colors text-zinc-400 tracking-widest uppercase">bslsavkanic@gmail.com</a>
+                                    </div>
+                                </div>
+                                <div class="p-10 border border-white/10 rounded-[2.5rem] bg-white/5 backdrop-blur-md">
+                                    <p class="text-primary text-[10px] font-bold tracking-widest uppercase mb-4 italic">Asistentka obchodu</p>
+                                    <h3 class="text-2xl font-black italic tracking-tighter uppercase mb-6">Ing. Maria Gaľová</h3>
+                                    <div class="space-y-2">
+                                        <a href="tel:+421907723897" class="text-xl font-light italic block hover:text-primary transition-colors tracking-tighter">0907 723 897</a>
+                                        <a href="mailto:bslmgalova@gmail.com" class="text-xs font-bold italic block hover:text-primary transition-colors text-zinc-400 tracking-widest uppercase">bslmgalova@gmail.com</a>
                                     </div>
                                 </div>
                                 <div class="flex items-center justify-center">

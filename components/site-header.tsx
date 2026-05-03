@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
+import Image from "next/image";
 import { navItems } from "@/lib/site-content";
 
 function isActive(pathname: string, href: string) {
@@ -40,16 +41,16 @@ export function SiteHeader() {
           : "border-transparent bg-white/70 backdrop-blur-xl"
       }`}
     >
-      <div className="mx-auto flex w-[95vw] items-center justify-between gap-6 py-5">
+      <div className="mx-auto flex w-[95vw] items-center justify-between gap-6 py-1.5">
         <Link href="/" className="shrink-0 leading-none">
-          <span className="flex flex-col">
-            <span className="text-2xl font-black uppercase tracking-tighter text-navy md:text-3xl">
-              BSL TRADING
-            </span>
-            <span className="mt-1 text-[11px] font-black uppercase tracking-normal text-primary">
-              Stavebná spoločnosť
-            </span>
-          </span>
+          <Image
+            src="/logo.png"
+            alt="BSL TRADING logo"
+            width={240}
+            height={80}
+            className="h-16 w-auto object-contain md:h-28"
+            priority
+          />
         </Link>
 
         <nav className="hidden items-center gap-8 lg:flex">
@@ -57,7 +58,7 @@ export function SiteHeader() {
             <Link
               key={item.href}
               href={item.href}
-              className={`group relative text-[11px] font-black uppercase tracking-normal transition-colors ${
+              className={`group relative text-[13px] font-black uppercase tracking-normal transition-colors ${
                 isActive(pathname, item.href) ? "text-primary" : "text-navy hover:text-primary"
               }`}
             >
@@ -74,7 +75,7 @@ export function SiteHeader() {
         <div className="hidden items-center lg:flex">
           <Link
             href="/kontakt"
-            className="bg-navy px-6 py-3 text-[11px] font-black uppercase tracking-normal text-white transition-colors hover:bg-primary"
+            className="bg-primary px-6 py-3 text-[13px] font-black uppercase tracking-normal text-white transition-colors hover:bg-navy"
           >
             Kontakt
           </Link>

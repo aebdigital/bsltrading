@@ -36,7 +36,7 @@ export function PageHero({
         className="object-cover"
       />
       <div className="absolute inset-0 bg-black/55" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(58,183,155,0.22),transparent_28%),linear-gradient(to_top,rgba(0,0,0,0.68),rgba(0,0,0,0.2))]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(29,80,162,0.22),transparent_28%),linear-gradient(to_top,rgba(0,0,0,0.68),rgba(0,0,0,0.2))]" />
       <div className="relative mx-auto flex h-full w-[95vw] items-end py-10 md:py-12">
         <motion.div
           initial={{ opacity: 0, y: 32 }}

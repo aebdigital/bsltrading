@@ -166,7 +166,7 @@ export function ContactForm() {
           <button
             type="submit"
             disabled={isSubmitting}
-            className="group relative inline-flex items-center justify-center overflow-hidden bg-navy px-8 py-4 text-[11px] font-black uppercase tracking-normal text-white transition-colors hover:bg-primary disabled:cursor-not-allowed disabled:bg-navy/40"
+            className="group relative inline-flex items-center justify-center overflow-hidden bg-primary px-8 py-4 text-[11px] font-black uppercase tracking-normal text-white transition-colors hover:bg-navy disabled:cursor-not-allowed disabled:bg-primary/40"
           >
             <AnimatedButtonText>
               {isSubmitting ? "Odosielam..." : "Odoslať správu"}
@@ -181,7 +181,7 @@ export function ContactForm() {
             className={`border px-5 py-4 text-sm leading-relaxed ${
               status === "success"
                 ? "border-primary/25 bg-primary/10 text-navy"
-                : "border-red-200 bg-red-50 text-red-700"
+                : "border-secondary/25 bg-secondary/10 text-navy"
             }`}
           >
             {feedback}

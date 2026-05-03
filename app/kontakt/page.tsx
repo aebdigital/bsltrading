@@ -38,9 +38,7 @@ export default function ContactPage() {
       <section className="mx-auto grid w-[95vw] gap-6 py-16 md:py-24 lg:grid-cols-[0.9fr_1.1fr]">
         <div className="space-y-6">
           <div className="border border-black/5 bg-white p-7 shadow-[0_16px_40px_rgba(0,0,0,0.05)] md:p-10">
-            <p className="text-[11px] font-black uppercase tracking-normal text-primary">
-              Firma
-            </p>
+
             <h2 className="mt-4 text-4xl font-black uppercase tracking-tight text-navy">
               {company.name}
             </h2>
@@ -51,28 +49,20 @@ export default function ContactPage() {
               <p>DIČ: {company.businessInfo.dic}</p>
               <p>{company.email}</p>
             </div>
-            <div className="mt-10 flex flex-col gap-4 sm:flex-row">
+
+            <div className="mt-8">
               <a
-                href={company.phoneHref}
-                className="group relative inline-flex items-center justify-center overflow-hidden bg-navy px-8 py-4 text-[11px] font-black uppercase tracking-normal text-white transition-colors hover:bg-primary"
+                href={company.facebook}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex h-10 w-10 items-center justify-center bg-[#1877F2] text-white transition-opacity hover:opacity-85"
+                aria-label="Facebook"
               >
-                <AnimatedButtonText>Zavolať</AnimatedButtonText>
-              </a>
-              <a
-                href={`mailto:${company.email}`}
-                className="group relative inline-flex items-center justify-center overflow-hidden border border-black/10 bg-white px-8 py-4 text-[11px] font-black uppercase tracking-normal text-navy transition-colors hover:border-primary hover:text-primary"
-              >
-                <AnimatedButtonText>Napísať e-mail</AnimatedButtonText>
+                <svg className="h-5 w-5 fill-current" viewBox="0 0 24 24">
+                  <path d="M9.101 24v-11.063h-3.842v-4.414h3.842v-3.256c0-3.814 2.329-5.89 5.73-5.89 1.629 0 3.03.121 3.437.176v3.986h-2.359c-1.85 0-2.208.88-2.208 2.169v2.835h4.414l-.574 4.414h-3.84v11.063z" />
+                </svg>
               </a>
             </div>
-            <a
-              href={company.facebook}
-              target="_blank"
-              rel="noreferrer"
-              className="mt-6 inline-flex text-[11px] font-black uppercase tracking-normal text-primary"
-            >
-              Facebook
-            </a>
           </div>
 
           <div className="overflow-hidden border border-black/5 bg-zinc-100 shadow-[0_16px_40px_rgba(0,0,0,0.05)]">
